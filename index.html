@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda JS</title>
+    <!--STYLES-->
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/fundamentos.js" defer></script>
+    <script src="js/productos.js" defer></script>
+    <script src="dom.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Tienda JS</h1>
+        <p>Explora nuestro catálogo de productos</p>
+    </header>
+
+    <main>
+
+        <section id="informacion-tienda">
+            <h2 id="bienvenida"></h2>
+            <p id="mensaje-tienda"></p>
+
+            <div class="resumen">
+                <p>Producto destacado: <span id="nombre-producto"></span></p>
+                <p>Precio: $<span id="precio-producto"></span></p>
+                <p id="disponibilidad"></p>
+            </div>
+        </section>
+
+        <section id="catalogo-local">
+            <h2>Nuestros productos destacados</h2>
+
+            <div class="controles-catalogo">
+                <input type="search" id="buscador" placeholder="Buscar producto...">
+
+                <select id="filtro-categoria">
+                    <option value="todas">Todas las categorias</option>
+                    <option value="Tecnología">Tecnología</option>
+                    <option value="Accesorios">Accesorios</option>
+                </select>
+
+                <button id="limpiar-filtros" type="button">
+                    Limpiar filtros
+                </button>
+
+            </div>
+
+            <div id="lista-local" class="productos"></div>
+            <p id="total-catalogo"></p>
+            <p id="resultado-busqueda"></p>
+        </section>
+
+        <p id="estado">Cargando productos...</p>
+        <section id="productos" class="productos"></section>
+    </main>
+</body>
+</html>
